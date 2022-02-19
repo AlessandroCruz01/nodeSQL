@@ -1,0 +1,13 @@
+const path = require('path')
+module.exports = {
+  config: path.resolve(__dirname, 'src', 'config', 'databaseConfig.js'), 
+
+  //o __dirname = local onde o arquivo está e a cada virgula é uma pasta a mais
+  //Alem do caminho das configurações do DB, tambem precisamos dizer onde serao criados nossas migrations
+
+  "migrations-path": path.resolve(__dirname, 'src', 'database', 'migrations')
+
+  //rodamos o comando de migrations
+  //yarn sequelize migration:create --name=create-users
+
+}
