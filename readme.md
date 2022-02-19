@@ -33,3 +33,14 @@ Rodar no terminal o comando: yarn sequelize db:create
   Quando usamos um ORM temos que ter uma pasta chamada models
     model sao uma representação de como nossa aplicacao vai se comunicar com nossa db
       um model é escrito em modo de classe!
+
+
+# -------------------------------------------------------------------------------------
+
+
+# Comecando a entender relacionamentos e querys mais complexas
+
+  # 1 usuario tem varios enderecos ( 1 - n )
+    
+  ## Vamos iniciar criando uma nova migration 
+    yarn sequelize migration:create --name=<nome da migration>

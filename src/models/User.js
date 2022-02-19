@@ -1,3 +1,4 @@
+//Para cada table temos um model
 const { Model, DataTypes } = require('sequelize')
 
 class User extends Model {
@@ -11,6 +12,11 @@ class User extends Model {
       sequelize: connection
     })
   }
+
+  static associate(models){
+    this.hasMany(models.Address, { foreignKey: 'user_id', as: 'addresses' }) //um usuario tem mtos enderecos
+  }
+
 }
 
 module.exports = User
