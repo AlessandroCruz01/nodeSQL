@@ -36,11 +36,15 @@ Rodar no terminal o comando: yarn sequelize db:create
 
 
 # -------------------------------------------------------------------------------------
-
-
 # Comecando a entender relacionamentos e querys mais complexas
 
   # 1 usuario tem varios enderecos ( 1 - n )
     
   ## Vamos iniciar criando uma nova migration 
     yarn sequelize migration:create --name=<nome da migration>
+
+  # 2 programador programa muitas me mtas tecnologias e as tecnologias sao usadas por muitos programadores ( n - n )
+    
+      ## Todo relacionamento N-N, o bd cria uma table pivo chamada user_techs com o user_id e tech_id
+
+       # yarn sequelize migration:create --name=<nome da migration>
