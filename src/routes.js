@@ -5,6 +5,7 @@ const UserController = require('./controllers/UserController')
 const AddressController = require('./controllers/AddressController')
 const TechController = require('./controllers/TechController')
 const ReportController = require('./controllers/ReportController')
+const DesktopController = require('./controllers/DesktopController')
 
 const routes = express.Router()
 
@@ -20,5 +21,9 @@ routes.post('/users/:user_id/techs', TechController.store)
 routes.delete('/users/:user_id/techs', TechController.delete) 
 
 routes.get('/report', ReportController.show)
+
+routes.get('/users/:user_id/desktop', DesktopController.index)
+routes.post('/users/:user_id/desktop', DesktopController.store)
+
 
 module.exports = routes;

@@ -1,6 +1,5 @@
 //Para cada table temos um model
 const { Model, DataTypes } = require('sequelize')
-
 class User extends Model {
   static init(connection){
     super.init({
@@ -16,8 +15,8 @@ class User extends Model {
   static associate(models){
     this.hasMany(models.Address, { foreignKey: 'user_id', as: 'addresses' }) //um usuario tem mtos enderecos
     this.belongsToMany(models.Tech, { foreignKey: 'user_id', through: 'user_techs', as: 'techs'})
+    this.hasMany(models.Desktop, { foreignKey: 'user_id', as: 'desktops' })
   }
-
 }
 
 module.exports = User
