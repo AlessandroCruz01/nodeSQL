@@ -48,5 +48,3 @@ Rodar no terminal o comando: yarn sequelize db:create
       ## Todo relacionamento N-N, o bd cria uma table pivo chamada user_techs com o user_id e tech_id
 
        # yarn sequelize migration:create --name=<nome da migration>
-
-  # 3 Queryes complexas
